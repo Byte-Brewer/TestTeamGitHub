@@ -84,11 +84,46 @@
                     <view key="view" contentMode="scaleToFill" id="6l2-1l-QXd">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="31l-hs-Nab">
+                                <rect key="frame" x="136" y="318" width="103" height="30"/>
+                                <state key="normal" title="Back to firstVC"/>
+                                <connections>
+                                    <action selector="backToVC:" destination="W8D-Lj-uVa" eventType="touchUpInside" id="7aP-82-DX6"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s1T-xk-TAT">
+                                <rect key="frame" x="16" y="244.5" width="343" height="27.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-UltraLight" family="Helvetica Neue" pointSize="24"/>
+                                <color key="textColor" red="0.022125940769910812" green="0.982776939868927" blue="0.94867736101150513" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="g47-SJ-f04">
+                                <rect key="frame" x="16" y="280" width="343" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="31l-hs-Nab" firstAttribute="centerY" secondItem="6l2-1l-QXd" secondAttribute="centerY" id="0Ua-Ec-AUl"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="s1T-xk-TAT" secondAttribute="trailing" id="1HB-Cp-Tpj"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="g47-SJ-f04" secondAttribute="leading" id="1q9-uF-uQD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="g47-SJ-f04" secondAttribute="trailing" id="5Fl-ne-SJ2"/>
+                            <constraint firstItem="g47-SJ-f04" firstAttribute="top" secondItem="s1T-xk-TAT" secondAttribute="bottom" constant="8" id="5O1-AF-N8U"/>
+                            <constraint firstItem="31l-hs-Nab" firstAttribute="top" secondItem="g47-SJ-f04" secondAttribute="bottom" constant="8" id="FgA-Ej-n0Q"/>
+                            <constraint firstAttribute="leadingMargin" secondItem="s1T-xk-TAT" secondAttribute="leading" id="han-OT-f3Q"/>
+                            <constraint firstItem="31l-hs-Nab" firstAttribute="centerX" secondItem="6l2-1l-QXd" secondAttribute="centerX" id="wz8-rE-HmS"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="npe-E8-y4S">
                         <barButtonItem key="leftBarButtonItem" title="Item" id="kbo-HI-7rZ"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="labelOutlet" destination="s1T-xk-TAT" id="8DS-DN-kjG"/>
+                        <outlet property="textFieldOutlet" destination="g47-SJ-f04" id="Xpy-9Y-hU1"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="830-Dl-p8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
