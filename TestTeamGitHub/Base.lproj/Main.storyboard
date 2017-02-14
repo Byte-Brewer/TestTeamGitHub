@@ -65,10 +65,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="DUb-OK-5jX">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="jKs-5z-IwV"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kJD-08-GiH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="557"/>
+            <point key="canvasLocation" x="2839.1999999999998" y="556.37181409295351"/>
         </scene>
         <!--Dima View Controller-->
         <scene sceneID="77u-Xc-gRe">
@@ -83,10 +86,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
+                    <navigationItem key="navigationItem" id="npe-E8-y4S">
+                        <barButtonItem key="leftBarButtonItem" title="Item" id="kbo-HI-7rZ"/>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="830-Dl-p8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1900" y="1277"/>
+            <point key="canvasLocation" x="2839.1999999999998" y="1276.9115442278862"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sU2-MF-yH2">

@@ -10,13 +10,17 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DimaID") as! DimaViewController
+    let thirdVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NazarID") as! NazarViewController
+    
     @IBOutlet weak var segContOutlet: UISegmentedControl!
     @IBAction func segmentController(_ sender: UISegmentedControl, forEvent event: UIEvent) {
         switch segContOutlet.selectedSegmentIndex {
         case 0:
-            print("0")
+            self.present(secondVC, animated: true, completion: nil)
         case 1:
-            print("1")
+            self.present(thirdVC, animated: true, completion: nil)
+
         default: break
         }
         
@@ -24,6 +28,8 @@ class ViewController: UIViewController {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
+//        secondVC.delegate = self
+//        thirdVC.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
     }
     
