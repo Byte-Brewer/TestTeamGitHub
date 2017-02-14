@@ -8,15 +8,11 @@
 
 import UIKit
 
-protocol DataSendToAnotherVCProtocol {
-    func dataSendToAnotherVC(data: AnyObject)
-}
-
-class ViewController: UIViewController, SendDataDelegate {
+class ViewController: UIViewController {
 
     let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DimaID") as! DimaViewController
     let thirdVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NazarID") as! NazarViewController
-    var delegateProtocol: DataSendToAnotherVCProtocol?
+    
     
     @IBOutlet weak var segContOutlet: UISegmentedControl!
     @IBAction func segmentController(_ sender: UISegmentedControl, forEvent event: UIEvent) {
@@ -25,28 +21,13 @@ class ViewController: UIViewController, SendDataDelegate {
             self.present(secondVC, animated: true, completion: nil)
         case 1:
             self.present(thirdVC, animated: true, completion: nil)
-
         default: break
         }
-        
-        
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        secondVC.delegate = self
-//        thirdVC.delegate = self
         // Do any additional setup after loading the view, typically from a nib.
-    }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
-    func textSendData(data: AnyObject) {
-        delegateProtocol?.dataSendToAnotherVC(data: data as AnyObject)
-        print("Here we are now: \(data)")
     }
 }
 
