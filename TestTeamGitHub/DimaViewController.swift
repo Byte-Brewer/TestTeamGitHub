@@ -12,7 +12,7 @@ protocol SendDataDelegate {
     func textSendData(data: AnyObject)
 }
 
-class DimaViewController: UIViewController {
+class DimaViewController: UIViewController, DataSendToAnotherVCProtocol {
 
     var delegate: SendDataDelegate?
     
@@ -22,6 +22,7 @@ class DimaViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        
         view.backgroundColor = UIColor.red
         // Do any additional setup after loading the view.
     }
@@ -29,6 +30,10 @@ class DimaViewController: UIViewController {
     @IBAction func backToVC(_ sender: Any) {
         dismiss(animated: true, completion: nil)
         delegate?.textSendData(data: textFieldOutlet.text! as AnyObject)
+    }
+    
+    func dataSendToAnotherVC(data: AnyObject) {
+        textFieldOutlet.text = data as? String
     }
     //Test if it's works as team
 }
