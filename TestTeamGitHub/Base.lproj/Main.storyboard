@@ -35,22 +35,48 @@
                                     <action selector="segmentController:forEvent:" destination="BYZ-38-t0r" eventType="valueChanged" id="lXU-ZA-lAO"/>
                                 </connections>
                             </segmentedControl>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nazar" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nRA-rX-qL3">
+                                <rect key="frame" x="16" y="213" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="NfE-wd-mHU"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dima" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEf-B1-0dN">
+                                <rect key="frame" x="16" y="403" width="343" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="F8a-9v-tv4"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="PEf-B1-0dN" firstAttribute="top" secondItem="tzI-Q3-qdl" secondAttribute="bottom" constant="50" id="4B0-y2-CLF"/>
+                            <constraint firstItem="nRA-rX-qL3" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="5BV-VF-e7f"/>
+                            <constraint firstItem="tzI-Q3-qdl" firstAttribute="top" secondItem="nRA-rX-qL3" secondAttribute="bottom" constant="50" id="5L2-EB-li0"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="PEf-B1-0dN" secondAttribute="trailing" id="Sed-mz-9cD"/>
                             <constraint firstAttribute="trailingMargin" secondItem="tzI-Q3-qdl" secondAttribute="trailing" constant="50" id="aSS-vA-Glj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nRA-rX-qL3" secondAttribute="trailing" id="btS-N2-MXN"/>
+                            <constraint firstItem="PEf-B1-0dN" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="bzL-pa-nkM"/>
                             <constraint firstItem="tzI-Q3-qdl" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="ng6-Ig-UcO"/>
                             <constraint firstItem="tzI-Q3-qdl" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="50" id="nuq-mV-G7T"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="5Kw-62-xCi"/>
                     <connections>
+                        <outlet property="labelDima" destination="PEf-B1-0dN" id="sc3-pE-cP0"/>
+                        <outlet property="labelNazar" destination="nRA-rX-qL3" id="rbk-BH-beV"/>
                         <outlet property="segContOutlet" destination="tzI-Q3-qdl" id="SNC-b4-g3k"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1092" y="791"/>
+            <point key="canvasLocation" x="1092" y="790.25487256371821"/>
         </scene>
         <!--Nazar View Controller-->
         <scene sceneID="JRv-42-aal">
@@ -162,7 +188,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="830-Dl-p8x" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204" y="1279"/>
+            <point key="canvasLocation" x="1092" y="1542"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="sU2-MF-yH2">

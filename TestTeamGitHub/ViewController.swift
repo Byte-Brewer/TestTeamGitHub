@@ -8,7 +8,11 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PassDataProtocol, SendDataDelegate {
+    
+    @IBOutlet weak var labelNazar: UILabel!
+    
+    @IBOutlet weak var labelDima: UILabel!
 
     let secondVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "DimaID") as! DimaViewController
     let thirdVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "NazarID") as! NazarViewController
@@ -27,7 +31,16 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        thirdVC.delegatic = self
+        secondVC.delegate = self
+    }
+    
+    func passData(data: String) {
+        labelNazar.text = data
+    }
+    
+    func textSendData(data: AnyObject) {
+        labelDima.text = data as? String
     }
 }
 
